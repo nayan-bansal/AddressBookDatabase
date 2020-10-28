@@ -30,3 +30,5 @@ update address_book set zip=121232 where first_name='naman';
 ## UC-5: Delete Data in the Table
 delete from address_book where first_name='naman' and last_name='goel';
 
+## UC-6: Retreive Data from Table
+select * from address_book where city='delhi' or state='maharashtra';
