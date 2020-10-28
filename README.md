@@ -37,3 +37,6 @@ select * from address_book where city='delhi' or state='maharashtra';
 select city, count(first_name) from address_book group by city;
 select state, count(first_name) from address_book group by state;
 
+## UC-8: Sort Entries in the Table
+select * from address_book where city='delhi' order by first_name;
+
