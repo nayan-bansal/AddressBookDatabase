@@ -40,3 +40,10 @@ select state, count(first_name) from address_book group by state;
 ## UC-8: Sort Entries in the Table
 select * from address_book where city='delhi' order by first_name;
 
+## UC-9: Alter Address Book to Add name and Type
+alter table address_book add address_book_name VARCHAR(20) NOT NULL;
+alter table address_book add type VARCHAR(20) NOT NULL;
+update address_book set address_book_name='mycontacts' , type='friends' where first_name='naman';
+update address_book set address_book_name='mycontacts', type='family' where first_name='annie';
+update address_book set address_book_name='mycontacts', type='profession' where first_name='james';
+select * from address_book;
