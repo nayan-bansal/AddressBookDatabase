@@ -47,3 +47,7 @@ update address_book set address_book_name='mycontacts' , type='friends' where fi
 update address_book set address_book_name='mycontacts', type='family' where first_name='annie';
 update address_book set address_book_name='mycontacts', type='profession' where first_name='james';
 select * from address_book;
+
+## UC-10: Count Person bt Address Book Type
+select type, count(first_name) from address_book group by type;
+
