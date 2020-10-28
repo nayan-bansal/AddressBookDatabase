@@ -51,3 +51,9 @@ select * from address_book;
 ## UC-10: Count Person bt Address Book Type
 select type, count(first_name) from address_book group by type;
 
+## UC-11: Add Person to Friends and Family
+insert into address_book 
+(first_name, last_name, address, city, state, zip, phone_number, email_id, address_book_name, type) VALUES
+('priya', 'garg', 'pitampura','delhi',delhi',199231,9988431819,'deepali@gmail.com','mycontacts','family'),
+('priyam', 'garg', 'rohini','delhi','New delhi',123551,9988991819,'priyam@gmail.com','mycontacts','friends');
+select * from address_book;
