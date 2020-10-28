@@ -24,3 +24,6 @@ insert into address_book
 ('naman','goel','thana','mumbai','maharashtra',145643,9822151873,'naman@gmail.com'),
 ('annie','hathway','sector-76','agra','uttar pradesh',343423,9899187937,annie@yahoo.com);
 
+## UC-4: Edit Data in the Table
+update address_book set zip=121232 where first_name='naman';
+
