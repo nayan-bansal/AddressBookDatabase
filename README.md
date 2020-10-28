@@ -32,3 +32,8 @@ delete from address_book where first_name='naman' and last_name='goel';
 
 ## UC-6: Retreive Data from Table
 select * from address_book where city='delhi' or state='maharashtra';
+
+## UC-7: Count contacts in city and state
+select city, count(first_name) from address_book group by city;
+select state, count(first_name) from address_book group by state;
+
