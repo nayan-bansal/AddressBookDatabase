@@ -69,6 +69,29 @@ insert into address_book
 ('priyam', 'garg', 'rohini','delhi','New delhi',123551,9988991819,'priyam@gmail.com','mycontacts','friends');
 select * from address_book;
 ```
+## UC-12: ER Diagram Table
+```
+# Create Table Address Book
+create table address_book(
+address_book_name varchar(20) not null,
+type varchar(20) not null);
+```
+# Create Table Contact
+```
+create table Contact(
+first_name varchar(20) NOT NULL PRIMARY KEY,
+last_name varchar(20) not null PRIMARY KEY,
+address_book_name varchar(20) not null,
+city varchar(20) not null,
+state varchar(20) not null,
+zip int(10) not null,
+phone_number int(10) NOT NULL,
+email_id VARCHAR(20) NOT NULL,
+FOREIGN KEY (address_book_name) REFERENCES address_book (address_book_name)
+);
+```
+
 ## UC-13: Retrieve Queries
+
 ```
 ```
