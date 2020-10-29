@@ -93,5 +93,23 @@ FOREIGN KEY (address_book_name) REFERENCES address_book (address_book_name)
 
 ## UC-13: Retrieve Queries
 
+# Insert Data
 ```
+insert into address_book (address_book_name, type) VALUES
+('mycontacts','family'),
+('personal','professional');
+insert into Contact VALUES
+('nayan','bansal','mycontacts','new delhi','delhi','delhi',110042,'9416029025,'nayan@gmail.com'),
+('pritamm','garg','personal','rohini','delhi','delhi',1233323,'9892287878,'pritam@gmail.com');
+```
+# Retreive Data
+```
+select * from Contact where city='delhi';
+
+select * from Contact where state='delhi';
+
+select * from Contact where city='delhi' order by first_name;
+
+select a.type, count(c.first_name) from address_book a left join Contact c 
+on a.address_book_name=c.address_book_name group by a.type;
 ```
